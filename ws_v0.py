@@ -2,7 +2,7 @@ import logging
 #from guppy import hpy
 #import zlib
 #hp=hpy()
-
+###HAI
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.ERROR)
 handler = logging.FileHandler('serverlog_new.log')
