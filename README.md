@@ -1,2 +1,4 @@
 # rshare
-REMOTE ACCESS
+rabbitmq server with websocket.
+Rabbit MQ PUB SUB Model.
+
