@@ -1,0 +1,20 @@
+ISSUE :
+1)Mouse slow - Fixed
+2)Image update not proper when quality more than 40%(Controle receiving buffer & image pasting squence) - Fixed
+3)Chrome only suppot - Fixed
+4)Broadcast socket error getting object event
+5)If page load is incomplete finish firefox - js not running
+6)browser ws fired on_open but coneection not created error througing : need to as try catch :
+*7)Firefox screen sharing image not proper update.
+8)owne Chat need to retry on fail. 
+9)Keyboard mouse need to fix
+
+
+
+=============================================================
+1)Audio Video chat
+2)DB intagration : create session id , user id
+
+
+
+

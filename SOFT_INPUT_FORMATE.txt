@@ -1,0 +1,84 @@
+SOCKETIO - NEXT VER
+
+USER ADDRESSS:
+<16 digit format>: First 10 digit is meeting id , last 6 digit user id
+if last 6 digit is 0 then that is broadcast id for the group.
+user type 0 : broadcast user 
+
+Mouse Move:
+Format = MOUS<X position>|<Yposition>
+ex: MOUS100|100 ( move mouse x=100,y=100)
+
+Mouse Click (down or up ):
+Format = MCLK<X position>|<Yposition>|<type>|<buttion>
+type=DOWN or UP
+DOWN = mouse down
+UP = mouse up
+buttion = 1 (left buttion)
+buttion = 2 ( center buttion)
+buttion = 3 ( right buttion)
+buttion = 4 ( Scroll )
+ex: MOUS100|100|DOWN|1 (down the mouse left buttion at 100x 100y position)
+
+Mouse Click (single click or double click):
+Format = MCLK<X position>|<Yposition>|<type>|<buttion>
+type=SCLK or DCLK
+SCLK = single click
+DCLK = double click
+buttion = 1 (left buttion)
+buttion = 2 ( center buttion)
+buttion = 3 ( right buttion)
+ex:MCLK100|100|SCLK|3 ( single click the mouse right buttion at 100x 100y position)
+
+Keyboard Press:
+Format = KCLK<type>||<key>
+type = DOWN or UP
+DOWN = key down
+UP = key up
+key = key value
+ex:KCLKDOWN|h (press h buttion 'not release')
+
+Keyboard typing:
+Format = KCLK<type>|<key>
+type=press
+key= key value
+ex:KCLKUP|h (release h buttion)
+
+Clipboard sync:
+Format = CLIP<type><data>
+type = COPY or PAST
+
+Message:
+Control request:
+Format = RCNT ( request controle )
+Controle accept responce:
+Format= ACNT ( accept controle )
+
+Message:
+Refresh Image:
+Format = NIMG ( new image request )
+
+HELLO CHECK and discover:
+Format : BEAT<type>|<stat>
+type=HAII or HELO
+stat = user status in json(example : presenter,admin,chatid)
+name = registered user name
+HAII - echo request
+HELO - echo reply
+
+CHAT:
+Format:CHAT<chat id>|<user name>|<B or U>|<message>
+user name = sender name
+B = chat type broadcast
+U= chat type unicast
+
+
+
+GCHT :get chat message based on chat id
+Format:GCHT<chat type>|<chat id>
+chat type = B or U
+B = broadcast chat
+U = unicast chat
+
+DESKTOP:
+Format = DESK<x-coordination> | <y-cordination>| <base64-Jpg-data>
